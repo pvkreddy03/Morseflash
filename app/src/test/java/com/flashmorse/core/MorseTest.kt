@@ -14,8 +14,8 @@ class MorseTest {
     }
     @Test fun pulseDecoder() {
         val decoder = LightDecoder(200)
-        var now = 1000L
-        decoder.accept(false, now)
+        var now = 1200L
+        decoder.accept(false, 1000L)
         Morse.pulses("SOS").forEach { pulse ->
             decoder.accept(pulse.on, now)
             now += pulse.units * 200L
